@@ -14,11 +14,11 @@ pipeline{
         stage('Deploy with docker compose'){
             steps{
                 // existing container if they are running
-                sh '
+                sh '''
                 cd ./DevOps-Project-Two-Tier-Flask-App-main
                 docker compose down || true
                 docker compose up -d --build
-                '
+                '''
             }
         }
     }
