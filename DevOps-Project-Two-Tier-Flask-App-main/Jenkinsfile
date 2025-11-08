@@ -14,7 +14,7 @@ pipeline{
         stage('Deploy with docker compose'){
             steps{
                 // existing container if they are running
-                sh 'cd /var/lib/jenkins/workspace/flask-app/Two-Tier-Flask-App'
+                sh 'cd ./DevOps-Project-Two-Tier-Flask-App-main'
                 sh 'docker compose down || true'
                 // start app, rebuilding flask image
                 sh 'docker compose up -d --build'
