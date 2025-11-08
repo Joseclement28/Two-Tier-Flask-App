@@ -17,6 +17,7 @@ pipeline{
                 sh 'cd ./DevOps-Project-Two-Tier-Flask-App-main'
                 sh 'docker compose down || true'
                 // start app, rebuilding flask image
+                sh 'cd ./DevOps-Project-Two-Tier-Flask-App-main'
                 sh 'docker compose up -d --build'
             }
         }
